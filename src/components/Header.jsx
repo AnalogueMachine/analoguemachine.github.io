@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Header extends Component {
     render() {
         return (
-            <div>Nothing to see here</div>
+            <header></header>
         )
     }
 }
