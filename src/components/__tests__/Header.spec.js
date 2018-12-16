@@ -1,36 +1,38 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Header from '../Header';
 import { shallow } from 'enzyme';
+import { Link } from 'react-router-dom';
 
 describe('Header component', () => {
-    let wrapper, homeLink, githubLink, twitterLink;
+    let wrapper, homeLink, aboutLink, githubLink, twitterLink;
 
     beforeEach(() => {
         wrapper = shallow(<Header/>);
         homeLink = wrapper.find('#homelink');
+        aboutLink = wrapper.find('#aboutlink');
         githubLink = wrapper.find('#githublink');
         twitterLink = wrapper.find('#twitterlink');
     });
 
-    it('renders', () => {
-        const div = document.createElement('div');
-        ReactDOM.render(<Header />, div);
-    });
-
     it('contains a header element', () => {
-        const wrapper = shallow(<Header/>);
         expect(wrapper.find('header').length).toEqual(1);
     });
 
-    describe('First link', () => {
-        it('should contain a logo', () => {
+    describe('Home link', () => {
+        it('should exist', () => {
             expect(homeLink).not.toBe(undefined);
+        });
+
+        it('should contain a logo', () => {
             expect(homeLink.props().className).toBe('logo');
         });
 
+        it('should be a react-router link', () => {
+            expect(homeLink.type()).toBe(Link);
+        });
+
         it('should link to the home page', () => {
-            expect(homeLink.props().href).toBe('/');
+            expect(homeLink.props().to).toBe('/');
         });
 
         it('should contain the text AnalogueMachine', () => {
@@ -38,10 +40,32 @@ describe('Header component', () => {
         });
     });
 
-    describe('Second link', () => {
+    describe('About link', () => {
+        it('should exist', () => {
+            expect(aboutLink.length).toBe(1);
+        });
+
+        it('should be a react-router link', () => {
+            expect(aboutLink.type()).toBe(Link);
+        });
+
+        it('should contain the appropriate text', () => {
+            expect(aboutLink.props().children).toBe('ABOUT');
+        });
+
+        it('should link to the about page', () => {
+            expect(aboutLink.props().to).toBe('/about');
+        });
+
+        it('should be a button', () => {
+            expect(aboutLink.props().className).toBe('button');
+        });
+    });
+
+    describe('Github link', () => {
         it('should exist', () => {
             expect(githubLink.length).toBe(1);
-        })
+        });
 
         it('should contain the appropriate text', () => {
             expect(githubLink.props().children).toBe('GITHUB');
@@ -56,7 +80,7 @@ describe('Header component', () => {
         });
     });
 
-    describe('Third link', () => {
+    describe('Twitter link', () => {
         it('should exist', () => {
             expect(twitterLink.length).toBe(1);
         })
