@@ -16,7 +16,11 @@ describe('Main app', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  it('should contain a Header component', () => {
-    expect(wrapper.find('Header').length).toBe(1);
+  it('should contain a BrowserRouter component', () => {
+    expect(wrapper.find('BrowserRouter').length).toBe(1);
   });
-});
+
+  it('should contain a PrimaryLayout component', () => {
+    expect(wrapper.find('PrimaryLayout').length).toBe(1);
+  });
+}); 
