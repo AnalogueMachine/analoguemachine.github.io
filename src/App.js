@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import './App.css';
+import './App.css';
 import PrimaryLayout from './components/PrimaryLayout';
 import { BrowserRouter } from 'react-router-dom';
 
