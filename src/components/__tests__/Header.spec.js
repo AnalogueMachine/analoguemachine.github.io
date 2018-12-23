@@ -144,7 +144,7 @@ describe('Header component', () => {
     
             it('should contain an appropriate image', () => {
                 expect(twitterLink.props().children[0].props.className).toBe('icon-rss');
-            })
+            });
         });;
 
         describe('link text', () => {
