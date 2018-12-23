@@ -8,7 +8,46 @@ import jestLogo from '../jest-logo.png';
 import reactRouterLogo from '../react-router-logo.png';
 import vscodeLogo from '../vscode.png';
 
+const cards = [
+  {
+    image: nodeLogo,
+    altText: "Node logo",
+    url: "https://nodejs.org/"
+  },
+  {
+    image: reactLogo,
+    altText: "React logo",
+    url: "https://reactjs.org/"
+  },
+  {
+    image: miniCSSLogo,
+    altText: "mini.css logo",
+    url: "https://minicss.org/"
+  },
+  {
+    image: jestLogo,
+    altText: "Jest logo",
+    url: "https://jestjs.io/"
+  },
+  {
+    image: reactRouterLogo,
+    altText: "React Router logo",
+    url: "https://reacttraining.com/react-router/"
+  },
+  {
+    image: vscodeLogo,
+    altText: "Visual Studio Code logo",
+    url: "https://code.visualstudio.com/"
+  }
+];
+
 export default class HomePage extends Component {
+  renderCards() {
+    return cards.map((card, index) => {
+      return <ImageCard key={index} image={card.image} altText={card.altText} url={card.url} />
+    });
+  };
+
   render() {
     return (
       <div className="container">
@@ -27,12 +66,7 @@ export default class HomePage extends Component {
           </div>
         </div>
         <div className="row">
-          <ImageCard image={nodeLogo} altText="Node logo"/>
-          <ImageCard image={reactLogo} altText="React logo" />
-          <ImageCard image={miniCSSLogo} altText="mini.css logo" />
-          <ImageCard image={jestLogo} altText="Jest logo" />
-          <ImageCard image={reactRouterLogo} altText="React Router logo" />
-          <ImageCard image={vscodeLogo} altText="Visual Studio Code logo" />
+          {this.renderCards()}
         </div>
       </div>
     );
