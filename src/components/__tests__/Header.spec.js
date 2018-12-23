@@ -19,7 +19,7 @@ describe('Header component', () => {
     });
 
     it('has a header with a responsive class name', () => {
-        expect(wrapper.find('header').props().className).toBe('row');
+        expect(wrapper.find('header').props().className).toBe('row sticky');
     });
 
     describe('Home link', () => {

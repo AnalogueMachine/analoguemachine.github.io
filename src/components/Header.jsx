@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class Header extends Component {
   render() {
     return (
-      <header className="row">
+      <header className="row sticky">
         <Link to='/' id='homelink' className='logo'>analoguemachine</Link>
         <Link to='/about' id='aboutlink' className='button col-sm col-md'>
           <span className="icon-user"></span>
