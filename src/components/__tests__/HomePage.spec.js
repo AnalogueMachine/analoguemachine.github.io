@@ -115,6 +115,9 @@ describe('Home Page', () => {
                 const nodeLogoFile = 'Node.js_logo.svg.png';
                 const reactLogoFile = 'React-icon.svg.png';
                 const miniCSSLogoFile = 'minicsslogo.png';
+                const jestLogoFile = 'jest-logo.png';
+                const reactRouterLogoFile = 'react-router-logo.png';
+                const vscodeLogoFile = 'vscode.png';
 
                 it('should contain an ImageCard for node', () => {
                     const nodeCard = thirdRow.props.children[0];
@@ -138,6 +141,30 @@ describe('Home Page', () => {
                     expect(miniCSSCard.type).toBe(ImageCard);
                     expect(miniCSSCard.props.image).toBe(miniCSSLogoFile);
                     expect(miniCSSCard.props.altText).toBe('mini.css logo');
+                });
+
+                it('should contain an ImageCard forJest', () => {
+                    const jestCard = thirdRow.props.children[3];
+                    
+                    expect(jestCard.type).toBe(ImageCard);
+                    expect(jestCard.props.image).toBe(jestLogoFile);
+                    expect(jestCard.props.altText).toBe('Jest logo');
+                });
+
+                it('should contain an ImageCard for React Router', () => {
+                    const reactRouterCard = thirdRow.props.children[4];
+                    
+                    expect(reactRouterCard.type).toBe(ImageCard);
+                    expect(reactRouterCard.props.image).toBe(reactRouterLogoFile);
+                    expect(reactRouterCard.props.altText).toBe('React Router logo');
+                });
+
+                it('should contain an ImageCard for React Router', () => {
+                    const vscodeCard = thirdRow.props.children[5];
+                    
+                    expect(vscodeCard.type).toBe(ImageCard);
+                    expect(vscodeCard.props.image).toBe(vscodeLogoFile);
+                    expect(vscodeCard.props.altText).toBe('Visual Studio Code logo');
                 });
             });
         });

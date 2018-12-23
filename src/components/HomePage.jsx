@@ -4,6 +4,9 @@ import ImageCard from './ImageCard';
 import nodeLogo from '../Node.js_logo.svg.png';
 import reactLogo from '../React-icon.svg.png';
 import miniCSSLogo from '../minicsslogo.png';
+import jestLogo from '../jest-logo.png';
+import reactRouterLogo from '../react-router-logo.png';
+import vscodeLogo from '../vscode.png';
 
 export default class HomePage extends Component {
   render() {
@@ -27,6 +30,9 @@ export default class HomePage extends Component {
           <ImageCard image={nodeLogo} altText="Node logo"/>
           <ImageCard image={reactLogo} altText="React logo" />
           <ImageCard image={miniCSSLogo} altText="mini.css logo" />
+          <ImageCard image={jestLogo} altText="Jest logo" />
+          <ImageCard image={reactRouterLogo} altText="React Router logo" />
+          <ImageCard image={vscodeLogo} altText="Visual Studio Code logo" />
         </div>
       </div>
     );

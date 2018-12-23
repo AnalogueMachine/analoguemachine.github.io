@@ -11,6 +11,7 @@ header .logo {
 
 .scaletofit {
   object-fit: scale-down !important;
+  padding: 30px !important;
 }
 
 @keyframes fadein {
