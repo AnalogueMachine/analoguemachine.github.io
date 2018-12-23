@@ -28,6 +28,10 @@ describe('Image card', () => {
             cardElement = wrapper.props().children;
         });
 
+        it('should be an anchor tag with a passed in href prop', () => {
+            expect(cardElement.props.href).toEqual(mockURL);
+        });
+
         it('should return a card', () => {
             expect(cardElement.props.className).toBe('card fluid');
         });
