@@ -9,6 +9,10 @@ header .logo {
   position: relative;
 }
 
+.scaletofit {
+  object-fit: scale-down !important;
+}
+
 @keyframes fadein {
   0% {
     opacity: 0;
