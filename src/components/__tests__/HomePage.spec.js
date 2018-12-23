@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import HomePage from '../HomePage';
+import ImageCard from '../ImageCard';
 
 describe('Home Page', () => {
     let wrapper;
@@ -28,24 +29,24 @@ describe('Home Page', () => {
         });
 
         describe('First row', () => {
-            let row;
+            let firstRow;
 
             beforeEach(() => {
-                row = container.props.children;
+                firstRow = container.props.children[0];
             });
 
             it('should contain a row with a centred div for the title', () => {
-                expect(row.props.className).toBe('row');
-                expect(row.props.children.props.className).toBe('col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm');
+                expect(firstRow.props.className).toBe('row');
+                expect(firstRow.props.children.props.className).toBe('col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm');
             });
 
             describe('Main title', () => {
                 let titleImageElement, titleElement, subtitleElement;
 
                 beforeEach(() => {
-                    titleImageElement = row.props.children.props.children[0]
-                    titleElement = row.props.children.props.children[1];
-                    subtitleElement = row.props.children.props.children[2];
+                    titleImageElement = firstRow.props.children.props.children[0]
+                    titleElement = firstRow.props.children.props.children[1];
+                    subtitleElement = firstRow.props.children.props.children[2];
                 });
 
                 it('should contain a title image', () => {
@@ -62,7 +63,7 @@ describe('Home Page', () => {
                 });
 
                 it('should contain a subtitle', () => {
-                    expect(subtitleElement.type).toBe('p');
+                    expect(subtitleElement.type).toBe('h3');
                     expect(subtitleElement.props.className).toBe('subtitle');
                     expect(subtitleElement.props.children).toBe('A software developer working in Belfast');
                 });
@@ -70,7 +71,75 @@ describe('Home Page', () => {
         });
 
         describe('Second row', () => {
-            // Tech cards
-        })
-    })
+            let secondRow;
+
+            beforeEach(() => {
+                secondRow = container.props.children[1];
+            });
+
+            it('should be a row', () => {
+                expect(secondRow.props.className).toBe('row');
+            });
+
+            describe('Row text container', () => {
+                let textContainer;
+
+                beforeEach(() => {
+                    textContainer = secondRow.props.children;
+                });
+
+                it('should be centred and sized appropriately', () => {
+                    expect(textContainer.props.className).toBe('col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm')
+                });
+                
+                it('should contain appropriate text', () => {
+                    expect(textContainer.props.children.type).toBe('p');
+                    expect(textContainer.props.children.props.className).toBe('subtitle');
+                    expect(textContainer.props.children.props.children).toBe('This website was built with the following technologies:');
+                });
+            });
+        });
+
+        describe('Third row', () => {
+            let thirdRow;
+
+            beforeEach(() => {
+                thirdRow = container.props.children[2];
+            });
+
+            it('should be a row', () => {
+                expect(thirdRow.props.className).toBe('row');
+            });
+
+            describe('Second row container', () => {
+                const nodeLogoFile = 'Node.js_logo.svg.png';
+                const reactLogoFile = 'React-icon.svg.png';
+                const miniCSSLogoFile = 'minicsslogo.png';
+
+                it('should contain an ImageCard for node', () => {
+                    const nodeCard = thirdRow.props.children[0];
+                    
+                    expect(nodeCard.type).toBe(ImageCard);
+                    expect(nodeCard.props.image).toBe(nodeLogoFile);
+                    expect(nodeCard.props.altText).toBe('Node logo');
+                });
+
+                it('should contain an ImageCard for React', () => {
+                    const reactCard = thirdRow.props.children[1];
+                    
+                    expect(reactCard.type).toBe(ImageCard);
+                    expect(reactCard.props.image).toBe(reactLogoFile);
+                    expect(reactCard.props.altText).toBe('React logo');
+                });
+
+                it('should contain an ImageCard for mini.css', () => {
+                    const miniCSSCard = thirdRow.props.children[2];
+                    
+                    expect(miniCSSCard.type).toBe(ImageCard);
+                    expect(miniCSSCard.props.image).toBe(miniCSSLogoFile);
+                    expect(miniCSSCard.props.altText).toBe('mini.css logo');
+                });
+            });
+        });
+    });
 });
