@@ -2,6 +2,10 @@ header .logo {
   font-size: 20px;
 }
 
+.centredtext {
+  text-align: center;
+}
+
 .maintitle, .subtitle {
   text-align: center;
   animation: fadein 2s;
