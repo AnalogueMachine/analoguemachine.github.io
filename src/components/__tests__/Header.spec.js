@@ -2,9 +2,12 @@ import React from 'react';
 import Header from '../Header';
 import { shallow } from 'enzyme';
 import { Link } from 'react-router-dom';
+import { HEADER_ICON_SIZE } from '../../utils/constants'
 
 describe('Header component', () => {
     let wrapper, homeLink, aboutLink, githubLink, twitterLink;
+
+    const correctStyle = {verticalAlign: 'sub'};
 
     beforeEach(() => {
         wrapper = shallow(<Header/>);
@@ -62,12 +65,22 @@ describe('Header component', () => {
         });
 
         describe('icon', () => {
-            it('should contain a span element for an icon', () => {
-                expect(aboutLink.props().children[0].type).toBe('span');
+            let userIcon;
+
+            beforeEach(() => {
+                userIcon = aboutLink.props().children[0];
+            });
+
+            it('should contain a User icon', () => {
+                expect(userIcon.type.name).toBe('User');
             });
     
-            it('should contain an appropriate image in the icon span', () => {
-                expect(aboutLink.props().children[0].props.className).toBe('icon-user');
+            it('should be the appropriate size', () => {
+                expect(userIcon.props.size).toBe(HEADER_ICON_SIZE);
+            });
+
+            it('should be correctly aligned', () => {
+                expect(userIcon.props.style).toEqual(correctStyle);
             });
         });
         
@@ -81,7 +94,7 @@ describe('Header component', () => {
             });
     
             it('should contain the appropriate text', () => {
-                expect(aboutLink.props().children[1].props.children).toBe('ABOUT');
+                expect(aboutLink.props().children[1].props.children).toBe(' ABOUT');
             });
         });
     });
@@ -99,13 +112,23 @@ describe('Header component', () => {
             expect(githubLink.props().className).toBe('button col-sm col-md');
         });
 
-        describe('link icon', () => {
-            it('should contain a span element for an icon', () => {
-                expect(githubLink.props().children[0].type).toBe('span');
+        describe('icon', () => {
+            let githubIcon;
+
+            beforeEach(() => {
+                githubIcon = githubLink.props().children[0];
+            });
+
+            it('should contain a Github icon', () => {
+                expect(githubIcon.type.name).toBe('GitHub');
             });
     
-            it('should contain an appropriate image', () => {
-                expect(githubLink.props().children[0].props.className).toBe('icon-share');
+            it('should be the appropriate size', () => {
+                expect(githubIcon.props.size).toBe(HEADER_ICON_SIZE);
+            });
+
+            it('should be correctly aligned', () => {
+                expect(githubIcon.props.style).toEqual(correctStyle);
             });
         });
 
@@ -119,7 +142,7 @@ describe('Header component', () => {
             });
     
             it('should contain the appropriate text', () => {
-                expect(githubLink.props().children[1].props.children).toBe('GITHUB');
+                expect(githubLink.props().children[1].props.children).toBe(' GITHUB');
             });
         });
     });
@@ -137,13 +160,23 @@ describe('Header component', () => {
             expect(twitterLink.props().className).toBe('button col-sm col-md');
         });
 
-        describe('link icon', () => {
+        describe('icon', () => {
+            let twitterIcon;
+
+            beforeEach(() => {
+                twitterIcon = twitterLink.props().children[0];
+            });
+
             it('should contain a span element for an icon', () => {
-                expect(twitterLink.props().children[0].type).toBe('span');
+                expect(twitterIcon.type.name).toBe('Twitter');
             });
     
-            it('should contain an appropriate image', () => {
-                expect(twitterLink.props().children[0].props.className).toBe('icon-rss');
+            it('should be the appropriate size', () => {
+                expect(twitterIcon.props.size).toBe(HEADER_ICON_SIZE);
+            });
+
+            it('should be correctly aligned', () => {
+                expect(twitterIcon.props.style).toEqual(correctStyle);
             });
         });;
 
@@ -157,7 +190,7 @@ describe('Header component', () => {
             });
     
             it('should contain the appropriate text', () => {
-                expect(twitterLink.props().children[1].props.children).toBe('TWITTER');
+                expect(twitterLink.props().children[1].props.children).toBe(' TWITTER');
             });
         });
     });

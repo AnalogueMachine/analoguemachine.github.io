@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { User, GitHub, Twitter } from 'react-feather';
+
+const ICON_SIZE = 18;
 
 export default class Header extends Component {
   render() {
@@ -7,16 +10,16 @@ export default class Header extends Component {
       <header className="row sticky">
         <Link to='/' id='homelink' className='logo'>analoguemachine</Link>
         <Link to='/about' id='aboutlink' className='button col-sm col-md'>
-          <span className="icon-user"></span>
-          <span className="headerlinktext">ABOUT</span>
+          <User size={ICON_SIZE} style={{verticalAlign: "sub"}}/>
+          <span className="headerlinktext"> ABOUT</span>
         </Link>
         <a href='https://github.com/AnalogueMachine' id='githublink' className='button col-sm col-md'>
-          <span className="icon-share"></span>
-          <span className="headerlinktext">GITHUB</span>
+          <GitHub size={ICON_SIZE} style={{verticalAlign: "sub"}}/>
+          <span className="headerlinktext"> GITHUB</span>
         </a>
         <a href='https://twitter.com/AnalogueMachine' id='twitterlink' className='button col-sm col-md'>
-          <span className="icon-rss"></span>
-          <span className="headerlinktext">TWITTER</span>
+          <Twitter size={ICON_SIZE} style={{verticalAlign: "sub"}}/>
+          <span className="headerlinktext"> TWITTER</span>
         </a>
       </header>
     )
