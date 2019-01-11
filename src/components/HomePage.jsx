@@ -62,7 +62,7 @@ export default class HomePage extends Component {
         </div>
         <div className="row">
           <div className="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm">
-            <p className="subtitle">This website was built with the following technologies:</p>
+            <p className="subtitle">This website was built in a test-driven fashion with the following technologies:</p>
           </div>
         </div>
         <div className="row">

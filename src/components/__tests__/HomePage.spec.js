@@ -95,7 +95,7 @@ describe('Home Page', () => {
                 it('should contain appropriate text', () => {
                     expect(textContainer.props.children.type).toBe('p');
                     expect(textContainer.props.children.props.className).toBe('subtitle');
-                    expect(textContainer.props.children.props.children).toBe('This website was built with the following technologies:');
+                    expect(textContainer.props.children.props.children).toBe('This website was built in a test-driven fashion with the following technologies:');
                 });
             });
         });
