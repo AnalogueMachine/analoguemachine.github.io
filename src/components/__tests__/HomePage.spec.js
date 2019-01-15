@@ -21,6 +21,14 @@ describe('Home Page', () => {
         expect(innerDiv.props.className).toBe('container');
     });
 
+    describe('componentDidMount', () => {
+        it('should return the page to the top', () => {
+            window.scrollTo = jest.fn();
+            wrapper.instance().componentDidMount();
+            expect(window.scrollTo).toBeCalledWith(0,0);
+        });
+    });
+
     describe('Container', () => {
         let container;
 

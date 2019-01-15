@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 export default class AboutPage extends Component {
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
+  
   render() {
     return (
       <div className="container">

@@ -42,6 +42,10 @@ const cards = [
 ];
 
 export default class HomePage extends Component {
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
+
   renderCards() {
     return cards.map((card, index) => {
       return <ImageCard key={index} image={card.image} altText={card.altText} url={card.url} />
