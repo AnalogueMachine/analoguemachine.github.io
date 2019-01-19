@@ -2,7 +2,7 @@
   "name": "mini-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://analoguemachine.github.io/mini-react/",
+  "homepage": "https://analoguemachine.github.io/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "mini.css": "^3.0.1",
