@@ -1,5 +1,5 @@
 # mini-react
-
+[![Build Status](https://travis-ci.com/AnalogueMachine/analoguemachine.github.io.svg?branch=source)](https://travis-ci.com/AnalogueMachine/analoguemachine.github.io)
 An attempt at test-driven development of a web app using [mini.css](https://minicss.org/) and [React](https://reactjs.org/), mainly for learning purposes.
 
 Bootstrapped with create-react-app so the commands to run the app should be familiar to anyone with experience with create-react-app.
