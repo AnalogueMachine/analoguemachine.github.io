@@ -2,6 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import AboutPage from '../AboutPage';
 
+const scrollToSpy = jest.fn();
+global.scrollTo = scrollToSpy;
+
 describe('About Page', () => {
     let wrapper;
 
@@ -15,9 +18,8 @@ describe('About Page', () => {
 
     describe('componentDidMount', () => {
         it('should return the page to the top', () => {
-            window.scrollTo = jest.fn();
             wrapper.instance().componentDidMount();
-            expect(window.scrollTo).toBeCalledWith(0,0);
+            expect(scrollToSpy).toBeCalledWith(0,0);
         });
     });
 
@@ -198,7 +200,7 @@ describe('About Page', () => {
                     expect(workList.props().children.length).toBe(2);
                     expect(workList.contains(
                         <li>
-                            <b>Present</b> Allstate Northern Ireland - Applications Developer (CompoZed)
+                            <b>Present</b> Agile/XP Applications Developer (Large US Insurance Company)
                         </li>)
                     ).toBe(true);
                     expect(workList.contains(

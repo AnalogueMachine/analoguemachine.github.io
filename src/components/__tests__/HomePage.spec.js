@@ -3,6 +3,9 @@ import { shallow } from 'enzyme';
 import HomePage from '../HomePage';
 import ImageCard from '../ImageCard';
 
+const scrollToSpy = jest.fn();
+global.scrollTo = scrollToSpy;
+
 describe('Home Page', () => {
     let wrapper;
 
@@ -23,9 +26,8 @@ describe('Home Page', () => {
 
     describe('componentDidMount', () => {
         it('should return the page to the top', () => {
-            window.scrollTo = jest.fn();
             wrapper.instance().componentDidMount();
-            expect(window.scrollTo).toBeCalledWith(0,0);
+            expect(scrollToSpy).toBeCalledWith(0,0);
         });
     });
 

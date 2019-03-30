@@ -38,7 +38,7 @@ export default class AboutPage extends Component {
             <h3>Work History</h3>
             <ul id="worklist">
               <li>
-                <b>Present</b> Allstate Northern Ireland - Applications Developer (CompoZed)
+                <b>Present</b> Agile/XP Applications Developer (Large US Insurance Company)
               </li>
               <li>
                 <b>Past</b> Science Communicator
