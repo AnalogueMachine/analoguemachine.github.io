@@ -8,3 +8,11 @@ after_success:
   - git remote rm origin
   - git remote add origin https://${GH_TOKEN}@github.com/AnalogueMachine/analoguemachine.github.io.git
   - npm run deploy
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  keep_history: true
+  on:
+    branch: master
