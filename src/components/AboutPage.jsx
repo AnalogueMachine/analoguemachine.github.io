@@ -11,7 +11,7 @@ export default class AboutPage extends Component {
         <div id="introsection" className="row">
           <div className="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm">
             <h1 className="centredtext">Hi</h1>
-            <p>I am a software developer working in Belfast. I recently (2018) graduated from the MSc Software Development course at Queen's University Belfast with distinction. My interests are full-stack web development, IoT and public engagement.</p>
+            <p>I am a software developer working in Belfast. I recently (2018) graduated from the MSc Software Development course at Queen's University Belfast with distinction. My interests are full-stack web development, IoT and public engagement. I also volunteer at the Farset Labs Coder Dojo, helping kids with their projects, but often learning something from them too.</p>
             <p>Before software development, I worked for many years in science communication - developing and presenting science shows and workshops for audiences of all ages and sizes across Ireland, as well as co-ordination of some larger events.</p>
             <p>Please do drop me a line on my Twitter or Github pages to get in touch. I am still learning so any feedback on this site is very welcome.</p>
           </div>

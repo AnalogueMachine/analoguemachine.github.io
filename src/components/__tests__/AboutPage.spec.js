@@ -75,7 +75,9 @@ describe('About Page', () => {
                         'I am a software developer working in Belfast. ' + 
                         'I recently (2018) graduated from the MSc Software Development course ' + 
                         'at Queen\'s University Belfast with distinction. ' + 
-                        'My interests are full-stack web development, IoT and public engagement.'
+                        'My interests are full-stack web development, IoT and public engagement. ' + 
+                        'I also volunteer at the Farset Labs Coder Dojo, helping kids with their projects, ' +
+                        'but often learning something from them too.'
                     );
                 });
     
