@@ -69,7 +69,7 @@ describe('Home Page', () => {
                 it('should contain a heading element with the main title', () => {
                     expect(titleElement.type).toBe('h1');
                     expect(titleElement.props.className).toBe('maintitle');
-                    expect(titleElement.props.children).toBe('analoguemachine');
+                    expect(titleElement.props.children).toBe('GoodCoverage');
                 });
 
                 it('should contain a subtitle', () => {
