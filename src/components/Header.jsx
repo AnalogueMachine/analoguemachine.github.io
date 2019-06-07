@@ -17,7 +17,7 @@ export default class Header extends Component {
           <GitHub size={ICON_SIZE} style={{verticalAlign: "sub"}}/>
           <span className="headerlinktext"> GITHUB</span>
         </a>
-        <a href='https://twitter.com/AnalogueMachine' id='twitterlink' className='button col-sm col-md'>
+        <a href='https://twitter.com/GoodCoverage' id='twitterlink' className='button col-sm col-md'>
           <Twitter size={ICON_SIZE} style={{verticalAlign: "sub"}}/>
           <span className="headerlinktext"> TWITTER</span>
         </a>
