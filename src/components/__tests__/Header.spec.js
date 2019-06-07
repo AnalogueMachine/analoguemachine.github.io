@@ -42,8 +42,8 @@ describe('Header component', () => {
             expect(homeLink.props().to).toBe('/');
         });
 
-        it('should contain the text AnalogueMachine', () => {
-            expect(homeLink.props().children).toBe('analoguemachine');
+        it('should contain the text GoodCoverage', () => {
+            expect(homeLink.props().children).toBe('GoodCoverage');
         });
     });
 
@@ -105,7 +105,7 @@ describe('Header component', () => {
         });
 
         it('should link to the about page', () => {
-            expect(githubLink.props().href).toBe('https://github.com/AnalogueMachine');
+            expect(githubLink.props().href).toBe('https://github.com/GoodCoverage');
         });
 
         it('should be a responsive button', () => {
@@ -153,7 +153,7 @@ describe('Header component', () => {
         });
         
         it('should link to the about page', () => {
-            expect(twitterLink.props().href).toBe('https://twitter.com/AnalogueMachine');
+            expect(twitterLink.props().href).toBe('https://twitter.com/GoodCoverage');
         });
 
         it('should be a responsive button', () => {
