@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/static/media/vscode.fca2bc9f.png"
   },
   {
-    "revision": "57554195c98f295c46037baec78fa4d4",
+    "revision": "9d3a904991e2b7b7d143dc565bca16c2",
     "url": "/index.html"
   }
 ];
