@@ -43,7 +43,7 @@ describe('Header component', () => {
         });
 
         it('should contain the text GoodCoverage', () => {
-            expect(homeLink.props().children).toBe('GoodCoverage');
+            expect(homeLink.props().children).toBe('HPC');
         });
     });
 
@@ -105,7 +105,7 @@ describe('Header component', () => {
         });
 
         it('should link to the about page', () => {
-            expect(githubLink.props().href).toBe('https://github.com/GoodCoverage');
+            expect(githubLink.props().href).toBe('https://github.com/HundredPercentCoverage');
         });
 
         it('should be a responsive button', () => {
@@ -153,7 +153,7 @@ describe('Header component', () => {
         });
         
         it('should link to the about page', () => {
-            expect(twitterLink.props().href).toBe('https://twitter.com/GoodCoverage');
+            expect(twitterLink.props().href).toBe('https://twitter.com/');
         });
 
         it('should be a responsive button', () => {
