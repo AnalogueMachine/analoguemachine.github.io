@@ -59,7 +59,7 @@ export default class HomePage extends Component {
           <div className="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm">
             <img src={Logo} alt="Main logo" className="maintitle"></img>
             <h1 className="maintitle">
-              HundredPercentCoverage
+              Hundred Percent Coverage
             </h1>
             <h3 className="subtitle">A software developer working in Belfast</h3>
           </div>
