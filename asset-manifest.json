@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.bb93a720.chunk.css",
-  "main.js": "/static/js/main.1a73e3cb.chunk.js",
-  "main.js.map": "/static/js/main.1a73e3cb.chunk.js.map",
+  "main.js": "/static/js/main.1cc2e228.chunk.js",
+  "main.js.map": "/static/js/main.1cc2e228.chunk.js.map",
   "static/css/1.5e2b7bc9.chunk.css": "/static/css/1.5e2b7bc9.chunk.css",
   "static/js/1.7fdc04c9.chunk.js": "/static/js/1.7fdc04c9.chunk.js",
   "static/js/1.7fdc04c9.chunk.js.map": "/static/js/1.7fdc04c9.chunk.js.map",
@@ -12,9 +12,9 @@
   "static/media/React-icon.svg.png": "/static/media/React-icon.svg.638be909.png",
   "static/media/jest-logo.png": "/static/media/jest-logo.9edcb510.png",
   "static/media/vscode.png": "/static/media/vscode.fca2bc9f.png",
-  "static/css/1.5e2b7bc9.chunk.css.map": "/static/css/1.5e2b7bc9.chunk.css.map",
   "static/css/main.bb93a720.chunk.css.map": "/static/css/main.bb93a720.chunk.css.map",
+  "static/css/1.5e2b7bc9.chunk.css.map": "/static/css/1.5e2b7bc9.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.b38007a8eafb44dcd5654012db1f736e.js": "/precache-manifest.b38007a8eafb44dcd5654012db1f736e.js",
+  "precache-manifest.08fc919372335abd1bf3f1edeee90621.js": "/precache-manifest.08fc919372335abd1bf3f1edeee90621.js",
   "service-worker.js": "/service-worker.js"
 }
