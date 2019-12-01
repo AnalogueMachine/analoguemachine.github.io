@@ -73,8 +73,8 @@ describe('About Page', () => {
                     expect(firstParagraphElement.type).toBe('p');
                     expect(firstParagraphElement.props.children).toEqual(
                         'I am a software developer working in Belfast. ' + 
-                        'I recently (2018) graduated from the MSc Software Development course ' + 
-                        'at Queen\'s University Belfast with distinction. ' + 
+                        'I graduated from the MSc Software Development course ' + 
+                        'at Queen\'s University Belfast with distinction in 2018. ' + 
                         'My interests are full-stack web development, IoT and public engagement. ' + 
                         'I also volunteer at the Farset Labs Coder Dojo, helping kids with their projects, ' +
                         'but often learning something from them too.'
@@ -97,7 +97,7 @@ describe('About Page', () => {
     
                     expect(thirdParagraphElement.type).toBe('p');
                     expect(thirdParagraphElement.props.children).toEqual(
-                        'Please do drop me a line on my Twitter or Github pages to get in touch. ' +
+                        'Please do drop me a line on GitHub to get in touch. ' +
                         'I am still learning so any feedback on this site is very welcome.'
                     );
                 });
@@ -159,61 +159,6 @@ describe('About Page', () => {
             });
         });
     
-        describe('Work History section', () => {
-            let workHistorySection;
-    
-            beforeEach(() => {
-                workHistorySection = wrapper.find('#workhistorysection');
-            });
-    
-            it('should exist', () => {
-                expect(workHistorySection).not.toBe(undefined);
-                expect(workHistorySection.exists()).toBeTruthy();
-            });
-    
-            it('should be a row', () => {
-                expect(workHistorySection.props().className).toBe('row');
-            });
-    
-            it('should contain a centred div for the text', () => {
-                expect(workHistorySection.props().children.type).toBe('div');
-                expect(workHistorySection.props().children.props.className).toBe('col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm');
-            });
-    
-            describe('Work History section content', () => {
-                let workHistoryContentDiv;
-    
-                beforeEach(() => {
-                    workHistoryContentDiv = workHistorySection.props().children;
-                });
-    
-                it('should contain a title heading with appropriate text', () => {
-                    const headingElement = workHistoryContentDiv.props.children[0];
-                    
-                    expect(headingElement.type).toBe('h3');
-                    expect(headingElement.props.children).toBe('Work History');
-                });
-    
-                it('should contain an unordered list of past jobs', () => {
-                    const workList = wrapper.find('#worklist');
-    
-                    expect(workList.exists()).toBeTruthy();
-                    expect(workList.getElement().type).toBe('ul');
-                    expect(workList.props().children.length).toBe(2);
-                    expect(workList.contains(
-                        <li>
-                            <b>Present</b> Agile/XP Applications Developer (Large US Insurance Company)
-                        </li>)
-                    ).toBe(true);
-                    expect(workList.contains(
-                        <li>
-                            <b>Past</b> Science Communicator
-                        </li>
-                    )).toBe(true);
-                });
-            });
-        });
-    
         describe('Skills section', () => {
             let skillsSection;
     
@@ -254,9 +199,10 @@ describe('About Page', () => {
     
                     expect(workList.exists()).toBeTruthy();
                     expect(workList.getElement().type).toBe('ul');
-                    expect(workList.props().children.length).toBe(7);
+                    expect(workList.props().children.length).toBe(8);
                     expect(workList.contains(<li>XP, TDD, Agile, CI/CD</li>)).toBe(true);
                     expect(workList.contains(<li>React / Redux</li>)).toBe(true);
+                    expect(workList.contains(<li>MERN stack</li>)).toBe(true);
                     expect(workList.contains(<li>Spring Boot</li>)).toBe(true);
                     expect(workList.contains(<li>Git / Jenkins</li>)).toBe(true);
                     expect(workList.contains(<li>HTML / CSS / JS</li>)).toBe(true);
